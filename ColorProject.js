@@ -19,16 +19,22 @@ for(var i = 0; i < squares.length; i++){
     
     //click listeners to squares
     squares[i].addEventListener("click", function(){
-        var  clickedColor = this.style.background;
+        var clickedColor = this.style.background;
         if (clickedColor == pickedColor){
             alert("Correct!");
-        } else {
+            changeColors(clickedColor);
+        } 
+        else {
             this.style.background = "#232323";
             messageDisplay.textContent = "Try again";
         }
-
     })
+}
 
+function changeColors(){
+    for( var i = 0; i < squares.length; i++){
+        colors[i].style.background = color;
+    }
 }
 
 
