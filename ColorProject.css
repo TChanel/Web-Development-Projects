@@ -15,3 +15,9 @@ body{
 h1{
     color: azure;
 }
+
+#stripe{
+    background: azure;
+    height: 30px;
+    text-align: center;
+}
