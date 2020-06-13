@@ -9,6 +9,7 @@ var colors = [
 var squares = document.querySelectorAll(".square");
 var pickedColor = colors[3];
 var colorDisplay = document.getElementById("colorDisplay");
+var messageDisplay = document.querySelector("message")
 
 colorDisplay.textContent = pickedColor;
 
@@ -18,12 +19,12 @@ for(var i = 0; i < squares.length; i++){
     
     //click listeners to squares
     squares[i].addEventListener("click", function(){
-
-        var  clickedColor =this.style.background;
+        var  clickedColor = this.style.background;
         if (clickedColor == pickedColor){
             alert("Correct!");
         } else {
-            alert("WRONG!!");
+            this.style.background = "#232323";
+            messageDisplay.textContent = "Try again";
         }
 
     })
