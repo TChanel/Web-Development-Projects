@@ -6,51 +6,63 @@ var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 
-var easyBtn = document.querySelector("#easyBtn");
-var hardBtn = document.querySelector("#hardBtn");
+var modeButtons = document.querySelectorAll(".mode");
 
-easyBtn.addEventListener("click", function(){
-    //console.log("easy button clicked");
-    easyBtn.classList.add("selected");
-    hardBtn.classList.remove("selected");
-    colors = generateRandomColors(3);
-    pickedColor = pickColor();
-    colorDisplay.textContent = pickedColor;
+var numOfSquares = 6;
 
-    for(var i = 0; i <squares.length; i++){
-        if(colors[i]){
-            squares[i].style.background = colors[i];}
-    else{
-        squares[i].style.display = "none";}
-    }
+for(var i = 0; i < modeButtons.length;  i++){
+    modeButtons[i].addEventListener("click", function(){
+        modeButtons[0].classList.remove("selected");
+        modeButtons[1].classList.remove("selected");
+        this.classList.add("selected");
 
-});
-hardBtn.addEventListener("click", function(){
-    //console.log("hard button clicked");
-    hardBtn.classList.add("selected");
-    easyBtn.classList.remove("selected");
-    colors = generateRandomColors(3);
-    pickedColor = pickColor();
-    colorDisplay.textContent = pickedColor;
+        this.textContent === "Easy" ? numOfSquares = 3: numOfSquares = 6;
+        reset();
 
-    for (var i  = 0; i < squares.length; i++) {
-        squares[i].style.background = colors[i];
-        squares[i].style.display = "block";
-    }
-});
+        //figure out how many squared to show
 
-resetButton.addEventListener("click", function(){
+        //pick new color
+
+        //pick newpicked color
+    });
+}
+
+function reset(){
     //generate new colors
-    colors = generateRandomColors(6);
+    colors = generateRandomColors(numOfSquares);
     //pick a new random color from the array
     pickedColor = pickColor();
     //change colorDipplay to math match picked Color
     colorDisplay.textContent = pickedColor;
+    resetButton.textContent = "New Colors";
+    messageDisplay.textContent = "";
+    //change colors of squares
+    for(var i = 0; i < squares.length; i++){
+        if(colors[i]){
+            squares[i].style.display = "block";
+            squares[i].style.background = colors[i];
+        } else{
+            squares[i].style.display = "none";
+        }
+    }
+    h1.style.background = "steelblue";
+}
+
+
+resetButton.addEventListener("click", function(){
+    //generate new colors
+    colors = generateRandomColors(numOfSquares);
+    //pick a new random color from the array
+    pickedColor = pickColor();
+    //change colorDipplay to math match picked Color
+    colorDisplay.textContent = pickedColor;
+    this.textContent = "New Colors";
+    messageDisplay.textContent = "";
     //change colors of squares
     for(var i = 0; i < squares.length; i++){
         squares[i].style.background = colors[i];
     }
-    h1.style.background = "#232323";
+    h1.style.background = "steelblue";
 });
 
 colorDisplay.textContent = pickedColor;
