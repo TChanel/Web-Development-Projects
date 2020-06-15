@@ -79,13 +79,13 @@ header{
     width:80%;
     height: 100vh;
     background-color: var(--main-font-color-dark);
-   padding: 4.4rem;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   z-index: 1250;
-   transform: translateX(-100%);
-   transition: transform 0.5s;
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1250;
+    transform: translateX(-100%);
+    transition: transform 0.5s;
 }
 nav::before{
     content: '';
@@ -115,9 +115,118 @@ nav::before{
     opacity: 1;
     transform: scale(1);
 }
+.nav-item{
+    border-bottom: 2px solid rgba(255,255,255,0.3)
+}
+.nav-link{
+    display: block;
+    color: azure;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    transition: color 0.5s;
+}
+.nav-link:hover{
+    color: var(--secondary-font-color);
+}
 
+/* Hero DIV */
 
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: url("hero.jpg") center no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
 
+.sub-headLine{
+    font-size: 8.5rem;
+    font-family: var(--secondary-font);
+    color: var(--secondary-font-color);
+    font-weight: 400;
+    line-height: 0.4;
+    letter-spacing: 2px;
+}
+
+.first-letter{
+    text-transform: uppercase;
+    font-size: 10.3rem;
+}
+
+.headline{
+    color: whitesmoke;
+    font-size: 3.7rem;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+    margin-right: -0.5;
+}
+.separator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.line {
+    max-width: 8.4rem;
+    height: 0.25rem;
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+}
+.line-right::before, .line-left::before{
+    content: '';
+    position: absolute;
+    border: 0.6rem solid transparent;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.line-right::before{
+    border-right-color: whitesmoke;
+    right: 0;
+}
+.line-left::before{
+    border-left-color: whitesmoke;
+    left: 0;
+}
+.asterisk{
+    font-size: 1.2rem;
+    color: var(--secondary-font-color);
+    margin: 0 1.6rem;
+}
+.headline-description h5{
+    color: whitesmoke;
+    font-size: 1.4rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 1.2 rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+}
+.btn{
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: -2px;
+}
+.cta-btn{
+    font-size: 1.1rem;
+    background-color: #fff;
+    padding: 0.9rem 1.8rem;
+    color: var(--body-font-color);
+    border-radius: 0.4rem;
+    transition: background-color 0.5s;
+}
+.cta-btn:hover, .cta-btn:focus{
+    color: whitesmoke;
+    background-color: var(--secondary-font-color);
+}
 
 
 
