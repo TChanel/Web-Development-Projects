@@ -282,7 +282,7 @@ nav::before{
  background-color: var(--main-font-color-dark);
 }
 
-/**/
+/*Tasteful Recipe*/
 .tasteful-recipes{
     background: url("tasteful-recipes.jpg") center no-repeat;
     background-size: cover;
@@ -293,8 +293,16 @@ nav::before{
     align-items:center;
 }
 
-
-
+/*Menu layout grid*/
+.image-group{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: 1.5rem;
+ }
+ .discover-our-menu .restaurant-description{
+     padding-top: 3rem;
+     margin-bottom: 0;
+ }
 
 
 
