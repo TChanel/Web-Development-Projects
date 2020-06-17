@@ -436,7 +436,17 @@ nav::before{
         left: 0;
         bottom: -3px;
     }
-    
+    .sub-headLine{
+        font-size: 10rem;
+    }
+    .first-letter{
+        font-size: 12rem;
+    }
+    .headline{
+        font-size: 4.7rem;
+        letter-spacing: 0.8rem;
+    }
+
 }
 
 
