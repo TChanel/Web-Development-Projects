@@ -154,7 +154,7 @@ nav::before{
     line-height: 0.4;
     letter-spacing: 2px;
     opacity: 0;
-    animation: fadeUp 0.5s forwards;
+    animation: fadeUp 1s forwards;
 }
 
 .first-letter{
@@ -170,6 +170,7 @@ nav::before{
     font-weight: 900;
     letter-spacing: 0.5rem;
     margin-right: -0.5;
+    animation: scale 0.2s forwards;
 }
 .separator{
     display: flex;
@@ -194,6 +195,8 @@ nav::before{
     border: 0.6rem solid transparent;
     top: 50%;
     transform: translateY(-50%);
+    animation: grow 0.5s forwards;
+    animation-delay: 1.2s;
 }
 .line-right::before{
     border-right-color: whitesmoke;
@@ -203,10 +206,18 @@ nav::before{
     border-left-color: whitesmoke;
     left: 0;
 }
+.single-animation{
+    opacity: 0;
+    animation: fadeUp 0.5s forwards;
+    animation-delay: 1.5s;
+}
 .asterisk{
     font-size: 1.2rem;
     color: var(--secondary-font-color);
     margin: 0 1.6rem;
+    opacity: 0;
+    animation: spin 0.5s forwards;
+    animation-delay: 1.2s;
 }
 .headline-description h5{
     color: whitesmoke;
@@ -336,8 +347,15 @@ nav::before{
     transform:translateX(-50%);
     border-radius: 50%;
 }
+.back-to-top i{
+    display: block;
+    color:whitesmoke;
+    font-size: 2rem;
+    padding: 2rem;
+    animation: up 2s infinite;
+}
 .footer-content{
-
+    /*overflow: hidden;*/
 }
 .footer-content h4{
     font-size: 1.9rem;
@@ -520,7 +538,36 @@ nav::before{
         width: 100%;
     }
 }
-
+@keyframes fadeUp{
+    0%{
+        transform: translateY(-4rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+@keyframes up{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+}
 
 
 
