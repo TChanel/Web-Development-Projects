@@ -5,7 +5,7 @@ $("ul").on("click", "li", function(){
     
 });
 //click on X to delete todo
-$("span").on("click","span", function(event){
+$("ul").on("click","span", function(event){
     $(this).parent().fadeOut(500, function(){
         $(this).remove();
     });
@@ -17,7 +17,7 @@ $("input[type='text'").keypress(function(event){
         var todoText = $(this).val();
         $(this).val("");
         //add new todo
-        $("ul").append("<li><span>X </span>" + todoText +  "</li>")
+        $("ul").append("<li><span><i class='fa fa-trash' aria-hidden='true'></i> </span>" + todoText +  "</li>")
     }
 })
 

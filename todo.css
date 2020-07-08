@@ -6,7 +6,7 @@ body{
 
 }
 h1{
-    background-color: #2980b9;
+    background-color: plum;
     color: whitesmoke;
     margin: 0;
     padding: 10px 20px;
@@ -14,45 +14,72 @@ h1{
     font-size: 24px;
     font-weight: normal;
 }
+.fa-plus{
+    float: right;
+}
+input::placeholder{
+    color: palevioletred;
+    opacity: 1;
+    font-family: 'Roboto';
+}
+span{
+    background-color: pink;
+    height: 40px;
+    margin-right: 20px;
+    text-align: center;
+    color: white;
+    width: 0;
+    display: inline-block;
+    opacity: 0;
+    transition: 0.2s linear;
+}
 ul{
     list-style: none;
     margin: 0;
     padding: 0;
 }
 li{
-    background: whitesmoke;
+    background: white;
     height: 40px;
     line-height: 40px;
-    color: darkslategrey;
+    color: palevioletred;
 }
 li:nth-child(2n){
-    background-color: #f7f7f7;
+    background-color: lavenderblush;
+}
+li:hover span{
+    width: 40px;
+    opacity: 1;
 }
 
 input{
     font-size: 18px;
-    background-color: #f7f7f7;
+    background-color: white;
     width: 100%;
-    padding: 13px, 13px, 13px, 20px;
+    padding: 13px 13px 13px 20px;
     box-sizing: border-box;
-    color: #2980b9;
+    color: palevioletred;
+    height: 40px;
+    line-height: 40px;
+    border: 3px rgba(0, 0, 0, 0.1);
 
 }
 
 input:focus{
-    color: #2980b9;
-    border: 3px solid #2980b9;
+    color: palevioletred;
+    border: 3px solid plum;
     outline: none;
+    background-color:white;
 
 }
 
 #container{
     width: 360px;
     margin: 100px auto;
-    background-color: #f7f7f7;
+    background-color: white;
     box-shadow:  0 0 3px rgba(0, 0, 0, 0.1);
 }
 .completed{
-    color: gray;
+    color: palevioletred;
     text-decoration: line-through;
 }
